@@ -1,0 +1,15 @@
+name: Security audit
+on:
+  push:
+    paths:
+      - '**/Cargo.toml'
+      - '**/Cargo.lock'
+jobs:
+  security_audit:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: tillmann-crabnebula/audit-check@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
