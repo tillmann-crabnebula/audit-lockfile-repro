@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: tillmann-crabnebula/audit-check@main
+      - uses: tillmann-crabnebula/audit-check@4fafb37c1201d973c5c8d72a42c87e8883550cec
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
