@@ -1,5 +1,6 @@
 name: Security audit Lockfile Respecting
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**/Cargo.toml'
