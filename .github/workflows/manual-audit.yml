@@ -1,0 +1,12 @@
+name: Manual Cargo Audit
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: cargo audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install cargo-audit --locked && cargo audit
